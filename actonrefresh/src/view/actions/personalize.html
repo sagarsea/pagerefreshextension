@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Personalize On Page Refresh</title>
+  </head>
+  <body>
+    <p>The objective here is pass the information about page refresh to a data element that would be passed to Adobe Target as mBox params.
+      Sagar promises to upgrade the plugin with capability to pass mbox params directly to Adobe Target on later upcoming versions.</p></div>
+    <table>
+          <tbody>
+            <tr>
+              <td>Select the Data Element to store page navigation information</td>
+              <td><input id="dataelement" /></td>
+              <td><button id="btnNamespace">Use Data Element</button></td>
+            </tr>
+        </tbody>
+  <table>
+    <div></div><p>Next Steps :</p>
+      <p>1. Navigate to your rule which sends params to Adobe Target & add the above data element</p>
+      <p>2. In your Adobe Target instance create audiences for the parameter equal to 'refresh' to personalize this experience</p>
+  </div>
+
+    <script src="https://assets.adobedtm.com/activation/reactor/extensionbridge/extensionbridge.min.js"></script>
+    <script>
+      window.extensionBridge.register({
+        init: function(info) {
+          if (info.settings) {
+            // TODO Populate form values from persisted settings.
+            if (info.settings) {
+            var namespace = info.settings.dataelement || '';
+            document.querySelector('#dataelement').value = namespace;
+
+          }
+        }
+        },
+
+        getSettings: function() {
+          // TODO Return settings object from form values.
+          return {
+             'dataelement' : document.querySelector('#dataelement').value
+                 }
+        },
+
+        validate: function() {
+          // TODO Return whether settings are valid.
+          return true;
+        }
+      });
+    </script>
+    <script> var btnNamespace = document.querySelector('#btnNamespace');
+      btnNamespace.addEventListener('click', function(event) {
+        window.extensionBridge.openDataElementSelector().then(function(dataElement) {
+          document.querySelector('#dataelement').value = dataElement;
+        });
+      });
+
+</script>
+  </body>
+</html> 

@@ -1,0 +1,48 @@
+{
+  "displayName": "ActOn PageRefresh",
+  "name": "acton-pagerefresh",
+  "platform": "web",
+  "version": "1.0.0",
+  "description": "Detects when users refresh page and provides opportunities to personalize such experiences",
+  "main": "src/lib/navcheck.js",
+  "author": {
+    "name": "Sagar Mandal"
+  },
+  "viewBasePath": "src/view/",
+  "events": [
+    {
+      "displayName": "Page Refresh Detected",
+      "name": "page-refresh-detected",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/navcheck.js"
+    }
+  ],
+  "actions": [
+    {
+      "displayName": "Personalize",
+      "name": "personalize",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/actions/personalize.js",
+      "viewPath": "actions/personalize.html"
+    },
+    {
+      "displayName": "Report to Analytics",
+      "name": "report-to-analytics",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/actions/reportToAnalytics.js",
+      "viewPath": "actions/reportToAnalytics.html"
+    }
+  ]
+}

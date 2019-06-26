@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Report to Adobe Analytics</title>
+  </head>
+  <body>
+    <h4>Assign contextData variables</h4>
+    <p>
+      contextData['<span class="weg" id="nsout"><span id="nsin"></span>.</span>
+      <input type="text" id="cdName" />'] 
+      </p>
+
+    <script src="https://assets.adobedtm.com/activation/reactor/extensionbridge/extensionbridge.min.js"></script>
+    <script>
+      window.extensionBridge.register({
+        init: function(info) {
+          if (info.settings) {
+            // TODO Populate form values from persisted settings.
+            
+            var cdspace = info.settings.cdname || '';
+            document.querySelector('#cdName').value = cdspace;
+          }
+        },
+
+        getSettings: function() {
+          // TODO Return settings object from form values.
+          return {
+                  'cdname' : document.querySelector('#cdName').value
+                 }
+        },
+
+        validate: function() {
+          // TODO Return whether settings are valid.
+          return true;
+        }
+      });
+    </script>
+    
+  </body>
+</html>
