@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Extension Configuration</title>
+  </head>
+  <body>
+    No configurations are required for this extension. 
+    Please follow the below steps to ensure that the plugin functions correctly - 
+    <p> Step 1 Data Elements : Navigate to the 'Data Elements' tab and click 'Add Data Element'. 
+    In the configuration screen select extension - Acton PageRefresh & data element type - 'PageRefresh Detected'
+      </p>
+      <p> Step 2 Rules : Navigate to your existing rule with Adobe Analytics & Adobe Target. 
+    Add action - 'Measure' to report into  Adobe Analytics as context data & 'Persoanlize' to send an mBox Parameter to Adobe Target
+       </p>
+
+    <script src="https://assets.adobedtm.com/activation/reactor/extensionbridge/extensionbridge.min.js"></script>
+    <script>
+      window.extensionBridge.register({
+        init: function(info) {
+          if (info.settings) {
+            // TODO Populate form values from persisted settings.
+            var blank = "blank"
+          }
+        },
+
+        getSettings: function() {
+          // TODO Return settings object from form values.
+          return {
+                  'blank' : "blank"
+                 }
+        },
+
+        validate: function() {
+          // TODO Return whether settings are valid.
+          return true;
+        }
+      });
+    </script>
+  </body>
+</html>

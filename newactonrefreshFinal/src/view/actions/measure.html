@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Report to Adobe Analytics</title>
+  </head>
+  <body>
+    <h3>Assign contextData variables</h3>
+    <p>
+      contextData['<span class="weg" id="nsout"><span id="nsin"></span>.</span>
+      <input type="text" id="cdName" />'] 
+      </p>
+      <p>During validation look for context data named refresh set as 1 when page refresh is detected.
+      Go Back to your report suite where the request is being sent and set the processing rule as below :
+      </p>
+      <div><img src= "https://www.sagarmandal.com/wp-content/uploads/2019/06/Extension-AA-ContextData.jpg" alt = "Page Refresh Extension By Sagar Mandal" width = "800" height="106" style="border:2px solid black">
+        </div>
+
+    <script src="https://assets.adobedtm.com/activation/reactor/extensionbridge/extensionbridge.min.js"></script>
+    <script>
+      window.extensionBridge.register({
+        init: function(info) {
+          if (info.settings) {
+            // TODO Populate form values from persisted settings.
+            
+            var cdspace = info.settings.cdname || '';
+            document.querySelector('#cdName').value = cdspace;
+          }
+        },
+
+        getSettings: function() {
+          // TODO Return settings object from form values.
+          return {
+                  'cdname' : document.querySelector('#cdName').value
+                 }
+        },
+
+        validate: function() {
+          // TODO Return whether settings are valid.
+          return true;
+        }
+      });
+    </script>
+    
+  </body>
+</html>

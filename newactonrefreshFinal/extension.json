@@ -1,0 +1,57 @@
+{
+  "displayName": "Acton PageRefresh",
+  "name": "acton-page-refresh",
+  "platform": "web",
+  "version": "1.1.0",
+  "description": "Detects page refreshes and provides an opportunity to personalize experience with a message or enure experience remains the same as previous page with reporting in Adobe Analytics",
+  "author": {
+    "name": "Sagar Mandal"
+      },
+    "viewBasePath": "src/view/",
+  "configuration": {
+    "viewPath": "configuration/configuration.html",
+    "schema": {
+      "$schema": "http://json-schema.org/draft-04/schema#",
+      "type": "object",
+      "properties": {}
+    }
+  },
+  "main": "src/lib/agapastala.js",
+  "actions": [
+    {
+      "displayName": "Personalize",
+      "name": "personalize",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/actions/personalize.js",
+      "viewPath": "actions/personalize.html"
+    },
+    {
+      "displayName": "Measure",
+      "name": "measure",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/actions/measure.js",
+      "viewPath": "actions/measure.html"
+    }
+  ],
+  "dataElements": [
+    {
+      "displayName": "PageRefresh Detected",
+      "name": "pagerefresh-detected",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/dataElements/pagerefreshDetected.js"
+    }
+  ],
+  "iconPath": "refreshextensionlogo.svg"
+}
