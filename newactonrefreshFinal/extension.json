@@ -2,13 +2,14 @@
   "displayName": "Acton PageRefresh",
   "name": "acton-page-refresh",
   "platform": "web",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "description": "Detects page refreshes and provides an opportunity to personalize experience with a message or enure experience remains the same as previous page with reporting in Adobe Analytics",
   "author": {
-    "name": "Sagar Mandal"
-      },
+    "name": "Sagar Mandal",
+    "email" : "smandal@adobe.com"
+          },
     "viewBasePath": "src/view/",
-  "configuration": {
+      "configuration": {
     "viewPath": "configuration/configuration.html",
     "schema": {
       "$schema": "http://json-schema.org/draft-04/schema#",
@@ -53,5 +54,7 @@
       "libPath": "src/lib/dataElements/pagerefreshDetected.js"
     }
   ],
-  "iconPath": "refreshextensionlogo.svg"
+  "iconPath": "refreshextensionlogo.svg",
+  "exchange_url": "https://exchange.adobe.com/experiencecloud.details.102848.html"
+    
 }
