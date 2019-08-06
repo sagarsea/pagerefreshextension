@@ -6,7 +6,8 @@
   "description": "Detects page refreshes and provides an opportunity to personalize experience with a message or enure experience remains the same as previous page with reporting in Adobe Analytics",
   "author": {
     "name": "Sagar Mandal",
-    "email" : "smandal@adobe.com"
+    "email" : "smandal@adobe.com",
+    "url" : "https://www.sagarmandal.com"
           },
     "viewBasePath": "src/view/",
       "configuration": {
@@ -55,6 +56,6 @@
     }
   ],
   "iconPath": "refreshextensionlogo.svg",
-  "exchange_url": "https://exchange.adobe.com/experiencecloud.details.102848.html"
+  "exchangeUrl": "https://www.adobeexchange.com/experiencecloud.details.102848.html"
     
 }
