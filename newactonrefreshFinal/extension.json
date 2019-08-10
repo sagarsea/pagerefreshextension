@@ -2,8 +2,8 @@
   "displayName": "Acton PageRefresh",
   "name": "acton-page-refresh",
   "platform": "web",
-  "version": "1.2.0",
-  "description": "Detects page refreshes and provides an opportunity to personalize experience with a message or enure experience remains the same as previous page with reporting in Adobe Analytics",
+  "version": "1.2.1",
+  "description": "Detects page refresh & you can 1) Measure with Adobe Analytics  2)Personalize by helpful messages or trigger chat with Adobe Target 3)Ensure consistent experience with Adobe Audience Manager",
   "author": {
     "name": "Sagar Mandal",
     "email" : "smandal@adobe.com",
